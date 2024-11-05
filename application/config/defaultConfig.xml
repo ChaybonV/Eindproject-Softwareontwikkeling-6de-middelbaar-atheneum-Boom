@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+  <entities>
+    <Bot>
+      <item key="MAX_HP" value="500" type="integer"/>
+      <item key="MIN_HP" value="50" type="integer"/>
+      <item key="HP_BAR_HEIGHT" value="10" type="integer"/>
+      <item key="ARMOR_SPAWN_MIN" value="10" type="integer"/>
+      <item key="DRAWING_WIDTH_MIN" value="20" type="integer"/>
+      <item key="DRAWING_WIDTH_MAX" value="100" type="integer"/>
+      <item key="BULLET_LOCATION_EXTRA_RADIUS" value="10" type="integer"/>
+      <item key="GO_TO_DEVIATION" value="100" type="integer"/>
+      <item key="RANDOM_LOCATION_MAX" value="400" type="integer"/>
+      <item key="VISION_LENGTH" value="800" type="integer"/>
+      <item key="ATTACK_GO_TO_SQUARE_WIDTH" value="325" type="integer"/>
+      <item key="MOVEMENT_SPEED" value="440" type="double"/>
+    </Bot>
+    <Entity>
+      <item key="MOVEMENT_SPEED" value="400" type="double"/>
+      <item key="ROTATION_SPEED" value="120" type="double"/>
+      <item key="DEFAULT_BACKPACK_MASS_MAX" value="10" type="double"/>
+      <item key="DEFAULT_BACKPACK_MASS" value="2" type="double"/>
+    </Entity>
+    <Player>
+      <item key="MAX_SURROUNDING_RADIUS" value="100" type="double"/>
+    </Player>
+  </entities>
+  <Game>
+    <item key="PLAYER_MAX_HP" value="200" type="integer"/>
+    <item key="PLAYER_MASS" value="70" type="integer"/>
+    <item key="PLAYFIELD_HEIGHT" value="10000" type="integer"/>
+    <item key="PLAYFIELD_WIDTH" value="10000" type="integer"/>
+    <item key="AMOUNT_OF_BOTS" value="20" type="integer"/>
+    <item key="DEFAULT_FRICTION_MU" value=".95" type="double"/>
+  </Game>
+  <items>
+    <weapons>
+      <shooters>
+        <assaultRifles>
+          <Ak47>
+            <item key="BULLET_VELOCITY" value="20" type="double"/>
+            <item key="FIRE_RATE" value="600" type="integer"/>
+            <item key="DAMAGE" value="24" type="integer"/>
+            <item key="WEIGHT" value="4" type="double"/>
+          </Ak47>
+          <M4>
+            <item key="BULLET_VELOCITY" value="15" type="double"/>
+            <item key="FIRE_RATE" value="450" type="integer"/>
+            <item key="DAMAGE" value="27" type="integer"/>
+            <item key="WEIGHT" value="4.4" type="double"/>
+          </M4>
+        </assaultRifles>
+        <pistols>
+          <DesertEagle>
+            <item key="BULLET_VELOCITY" value="20" type="double"/>
+            <item key="FIRE_RATE" value="1200" type="integer"/>
+            <item key="DAMAGE" value="70" type="integer"/>
+            <item key="WEIGHT" value="2" type="double"/>
+          </DesertEagle>
+          <Glock>
+            <item key="BULLET_VELOCITY" value="5" type="double"/>
+            <item key="FIRE_RATE" value="650" type="integer"/>
+            <item key="DAMAGE" value="17" type="integer"/>
+            <item key="WEIGHT" value=".5" type="double"/>
+          </Glock>
+        </pistols>
+        <submachineGuns>
+          <P90>
+            <item key="BULLET_VELOCITY" value="14" type="double"/>
+            <item key="FIRE_RATE" value="300" type="integer"/>
+            <item key="DAMAGE" value="8" type="integer"/>
+            <item key="WEIGHT" value="2.5" type="double"/>
+          </P90>
+          <Uzi>
+            <item key="BULLET_VELOCITY" value="17" type="double"/>
+            <item key="FIRE_RATE" value="380" type="integer"/>
+            <item key="DAMAGE" value="10" type="integer"/>
+            <item key="WEIGHT" value="3.6" type="double"/>
+          </Uzi>
+        </submachineGuns>
+        <magazines>
+          <LightMagazine>
+            <item key="MAX" value="20" type="integer"/>
+          </LightMagazine>
+          <MediumMagazine>
+            <item key="MAX" value="60" type="integer"/>
+          </MediumMagazine>
+          <HeavyMagazine>
+            <item key="MAX" value="24" type="integer"/>
+          </HeavyMagazine>
+        </magazines>
+      </shooters>
+    </weapons>
+    <Armor>
+      <item key="PROTECTION_MAX" value="200" type="integer"/>
+    </Armor>
+    <Item>
+      <item key="WIDTH" value="10" type="double"/>
+    </Item>
+    <ItemType>
+      <item key="ARMOR" value="13" type="integer"/>
+      <item key="BACKPACK" value="10" type="integer"/>
+      <item key="WEAPON" value="17" type="integer"/>
+      <item key="MAGAZINE" value="35" type="integer"/>
+    </ItemType>
+  </items>
+  <ErrorMessageDisplayer>
+    <item key="MESSAGE_TIME" value="3000000000" type="long"/>
+    <item key="QUEUE_TIME" value="1000000000" type="long"/>
+  </ErrorMessageDisplayer>
+  <PlayField>
+    <item key="SPAWN_DEVIATION_PX" value="50" type="integer"/>
+    <item key="SPAWN_FREQUENCY" value="400" type="integer"/>
+  </PlayField>
+</config>

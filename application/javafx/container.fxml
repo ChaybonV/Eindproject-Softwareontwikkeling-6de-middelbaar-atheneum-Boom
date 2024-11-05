@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="980.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.javafx.Controller">
+  <top>
+    <MenuBar fx:id="menuBar" prefHeight="20.0" prefWidth="628.0" BorderPane.alignment="CENTER">
+      <Menu mnemonicParsing="true" text="_Menu">
+        <MenuItem mnemonicParsing="false" onAction="#pauseGame" text="Pause">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+        <MenuItem mnemonicParsing="false" onAction="#startNewGame" text="New Game">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+        <MenuItem mnemonicParsing="false" onAction="#close" text="Close Game">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+      </Menu>
+    </MenuBar>
+  </top>
+  <right>
+    <SplitPane fx:id="sidePanel" dividerPositions="0.304, 0.3372, 0.515, 0.5006, 0.6922" orientation="VERTICAL" prefHeight="475.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <Label layoutX="49.0" text="Items in anchorpoints">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+        <Label layoutX="14.0" layoutY="22.0" text="Left- &amp; Righthand" />
+        <ChoiceBox fx:id="handsChoice" layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="150.0" />
+        <Label layoutX="14.0" layoutY="71.0" text="Body" />
+        <ChoiceBox fx:id="bodyChoice" layoutX="14.0" layoutY="88.0" prefHeight="25.0" prefWidth="150.0" />
+        <Label layoutX="14.0" layoutY="119.0" text="Back" />
+        <ChoiceBox fx:id="backChoice" layoutX="14.0" layoutY="136.0" prefHeight="25.0" prefWidth="150.0" />
+        <Label layoutX="11.0" layoutY="163.0" text="Magazines">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+        <Label layoutX="13.0" layoutY="182.0" text="Light ammo:" />
+        <Label layoutX="12.0" layoutY="199.0" text="Medium ammo:" />
+        <Label layoutX="11.0" layoutY="217.0" text="Heavy ammo:" />
+        <Label fx:id="magazineTotalLight" layoutX="85.0" layoutY="183.0" text="LIGHT MAG" />
+        <Label fx:id="magazineTotalMedium" layoutX="100.0" layoutY="200.0" text="MID MAG" />
+        <Label fx:id="magazineTotalHeavy" layoutX="88.0" layoutY="218.0" text="HEAVY MAG" />
+        <Label fx:id="backpackCurrentMass" layoutX="171.0" layoutY="140.0" text="BP" textAlignment="RIGHT" />
+        <Label layoutX="190.0" layoutY="139.0" text="/" />
+        <Label fx:id="backpackMaxMass" layoutX="201.0" layoutY="139.0" text="MAX BP" />
+      </AnchorPane>
+         <Label text="Items in backpack">
+            <font>
+               <Font name="System Bold Italic" size="14.0" />
+            </font>
+         </Label>
+      <TableView fx:id="backpackTable" prefHeight="122.0" prefWidth="248.0">
+        <columns>
+          <TableColumn prefWidth="110.0" resizable="false" text="Name" />
+          <TableColumn prefWidth="64.0" resizable="false" text="Mass" />
+          <TableColumn prefWidth="73.0" resizable="false" text="Extra" />
+        </columns>
+      </TableView>
+         <Label text="Items on ground">
+            <font>
+               <Font name="System Bold Italic" size="14.0" />
+            </font>
+         </Label>
+      <TableView fx:id="pickUpTable" prefHeight="200.0" prefWidth="250.0">
+        <columns>
+          <TableColumn prefWidth="110.0" resizable="false" text="Name" />
+          <TableColumn prefWidth="64.0" resizable="false" text="Mass" />
+          <TableColumn prefWidth="73.0" resizable="false" text="Extra" />
+        </columns>
+      </TableView>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="247.0" prefWidth="248.0">
+        <ProgressBar fx:id="armorBar" layoutX="9.0" layoutY="35.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
+        <Label layoutX="14.0" layoutY="15.0" text="Armor" />
+        <Label layoutX="14.0" layoutY="65.0" text="HP" />
+        <ProgressBar fx:id="healthBar" layoutX="9.0" layoutY="85.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
+        <Label layoutX="14.0" layoutY="115.0" text="Superboost" />
+        <ProgressBar fx:id="boostBar" layoutX="9.0" layoutY="135.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
+        <Label layoutX="14.0" layoutY="165.0" text="Magazine" />
+        <ProgressBar fx:id="magazineBar" layoutX="9.0" layoutY="185.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
+        <Label fx:id="magazineTotal" layoutX="49.0" layoutY="209.0" text="TOTAL MAG" textAlignment="RIGHT" />
+        <Label layoutX="122.0" layoutY="209.0" text="/" />
+        <Label fx:id="magazineMax" layoutX="135.0" layoutY="209.0" text="MAG MAG" />
+      </AnchorPane>
+    </SplitPane>
+  </right>
+  <center>
+    <Pane fx:id="canvasAnchorPane" minHeight="475.0" minWidth="200.0" prefHeight="496.0" prefWidth="819.0" BorderPane.alignment="CENTER">
+      <Canvas fx:id="canvas" height="100" onMouseClicked="#canvasClick" width="100" />
+    </Pane>
+  </center>
+</BorderPane>
